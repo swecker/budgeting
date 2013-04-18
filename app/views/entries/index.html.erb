@@ -1,0 +1,29 @@
+<h1>Listing entries</h1>
+
+<table>
+  <tr>
+    <th>Budget</th>
+    <th>Date</th>
+    <th>Notes</th>
+    <th>Amount</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @entries.each do |entry| %>
+  <tr>
+    <td><%= entry.budget_id %></td>
+    <td><%= entry.date %></td>
+    <td><%= entry.notes %></td>
+    <td><%= entry.amount %></td>
+    <td><%= link_to 'Show', entry %></td>
+    <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+    <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Entry', new_entry_path %>

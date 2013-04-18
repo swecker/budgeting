@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date:</b>
+  <%= @income.date %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @income.notes %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @income.amount %>
+</p>
+
+
+<%= link_to 'Edit', edit_income_path(@income) %> |
+<%= link_to 'Back', incomes_path %>

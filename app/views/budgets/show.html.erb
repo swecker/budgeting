@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @budget.name %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @budget.notes %>
+</p>
+
+<p>
+  <b>Percentage:</b>
+  <%= @budget.percentage %>
+</p>
+
+<p>
+  <b>Overflow:</b>
+  <%= @budget.overflow %>
+</p>
+
+<p>
+  <b>Balance:</b>
+  <%= @budget.balance %>
+</p>
+
+
+<%= link_to 'Edit', edit_budget_path(@budget) %> |
+<%= link_to 'Back', budgets_path %>

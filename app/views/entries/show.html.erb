@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Budget:</b>
+  <%= @entry.budget_id %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @entry.date %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @entry.notes %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @entry.amount %>
+</p>
+
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>
