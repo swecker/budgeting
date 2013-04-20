@@ -24,7 +24,11 @@ class BudgetsController < ApplicationController
   # GET /budgets/new
   # GET /budgets/new.json
   def new
+    @availability = 100
+    Budget.all.each{|b| @availability -= b.percentage}
     @budget = Budget.new
+
+    puts @availability
 
     respond_to do |format|
       format.html # new.html.erb
